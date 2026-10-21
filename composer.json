@@ -1,0 +1,68 @@
+{
+    "name": "sammy-boy/laravel-reporting",
+    "description": "Reporting publication layer for Laravel microservices. Owns HOW reporting messages are shaped and published; delegates transport to uzapoint/eventbus-core.",
+    "keywords": [
+        "laravel",
+        "microservices",
+        "reporting",
+        "event-driven",
+        "eventbus",
+        "snapshot"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://github.com/sammy-boy/laravel-reporting",
+    "support": {
+        "issues": "https://github.com/sammy-boy/laravel-reporting/issues",
+        "source": "https://github.com/sammy-boy/laravel-reporting"
+    },
+    "authors": [
+        {
+            "name": "Sammy Orondo",
+            "email": "sammyorondo2@gmail.com",
+            "homepage": "https://github.com/sammy-boy",
+            "role": "Lead Developer & Package Maintainer"
+        }
+    ],
+    "require": {
+        "php": "^8.4",
+        "illuminate/contracts": "^11.0|^12.0|^13.0",
+        "illuminate/database": "^11.0|^12.0|^13.0",
+        "illuminate/support": "^11.0|^12.0|^13.0",
+        "uzapoint/eventbus-core": "^1.0"
+    },
+    "require-dev": {
+        "laravel/framework": "^11.0|^12.0|^13.0",
+        "mockery/mockery": "^1.6",
+        "orchestra/testbench-core": "^9.0|^10.0|^11.0",
+        "phpunit/phpunit": "^11.5|^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "SammyBoy\\Reporting\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SammyBoy\\Reporting\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SammyBoy\\Reporting\\ReportingServiceProvider"
+            ],
+            "aliases": {
+                "Reporting": "SammyBoy\\Reporting\\Facades\\Reporting"
+            }
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

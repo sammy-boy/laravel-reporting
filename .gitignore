@@ -1,0 +1,6 @@
+/vendor/
+/composer.lock
+/composer.offline.json
+/composer.offline.lock
+/.phpunit.cache/
+/.phpunit.result.cache
